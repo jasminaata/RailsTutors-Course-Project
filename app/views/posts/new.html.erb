@@ -1,0 +1,11 @@
+<h1>New post</h1>
+
+<select name="user_id">
+    <% User.all.each do |u| %>
+        <option value="<%= u.id %>"><%= u.name %></option>
+    <% end %>
+</select>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', posts_path %>
